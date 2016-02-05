@@ -19,15 +19,18 @@ fs.readFile('./template.html')
 
 ## Parse(config[, opts])
 
-Creates a parser with [rogain-config](https://www.npmjs.com/package/rogain-config) and options.  Configuration is used to match components and helpers (only names are required to match, the contents will not be called while parsing).  A couple options are used by html
+Creates a parser with [rogain-config](https://www.npmjs.com/package/rogain-config) and options.  
 
-<dl>
-    <dt>config</dt>
-    <dd>rogain-config instance or plain object with components, helpers, and filters.</dd>
+The config is used to match components, helpers, and variables (only names are required to match, the contents will not be called while parsing). Options are provides to configure the `htmlparser` parser and handler.
 
-    <dt>opts</dt>
-    <dd>Object.</dd>
-</dl>
+
+___config___
+
+rogain-config instance or plain object with components, helpers, and filters.
+
+___opts___
+
+Object.
 
 `opts` is optional. Options are related to the [htmlparser](https://github.com/tautologistics/node-htmlparser) module.
 

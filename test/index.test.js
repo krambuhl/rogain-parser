@@ -1,7 +1,7 @@
 var test = require('tape');
 var Parser = require('../dist');
 
-const simpleTemplate = '<div class="block" data-key={key}>{@children}</div>';
+const simpleTemplate = '<div class="block" data-key={keys|join}>{@children}</div>';
 
 var parser = new Parser({
   components: { Wrapper: null },
