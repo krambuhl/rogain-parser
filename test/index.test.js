@@ -1,7 +1,9 @@
+var fs = require('fs');
 var test = require('tape');
-var Parser = require('../dist');
+var through = require('through2');
+var gulp = require('gulp');
 
-const simpleTemplate = '<div class="block" data-key={keys|join}>{@children}</div>';
+var Parser = require('../dist');
 
 var parser = new Parser({
   components: { Wrapper: null },
@@ -9,12 +11,12 @@ var parser = new Parser({
   filter: { join: null } 
 });
 
-
-test('basic test', function(t) {
+test('parser.parseStream()', function(t) {
   t.plan(9);
-
-  parser.parse(simpleTemplate)
-    .then(tree => {
+  fs.createReadStream(__dirname + '/fixtures/Simple.rogain')
+    .pipe(parser.parseStream())
+    .pipe(through(function(buf, enc, end) {
+      var tree = JSON.parse(buf.toString());
       t.equal(tree !== undefined, true);
       t.equal(tree.type, 'tag');
       t.equal(tree.attrs[0].name, 'class');
@@ -24,5 +26,20 @@ test('basic test', function(t) {
       t.equal(tree.children[0].type, 'textnode');
       t.equal(tree.children[0].data[0].type, 'variable');
       t.equal(tree.children[0].data[0].path, '@children');
-    })
+    }))
+});
+
+test('parser.parse()', function(t) {
+  t.plan(9);
+  parser.parse('<div class="{mooger} block" data-{key}={keys|join}>{@children}</div>', tree => {
+    t.equal(tree !== undefined, true);
+    t.equal(tree.type, 'tag');
+    t.equal(tree.attrs[0].name, 'class');
+    t.equal(tree.attrs[1].data[0].type, 'variable');
+    t.equal(tree.attrs[1].data[0].path, 'keys');
+    t.equal(tree.attrs[1].data[0].filters[0].name, 'join');
+    t.equal(tree.children[0].type, 'textnode');
+    t.equal(tree.children[0].data[0].type, 'variable');
+    t.equal(tree.children[0].data[0].path, '@children');
+  });
 });
