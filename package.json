@@ -6,7 +6,7 @@
   "scripts": {
     "build": "babel lib -d dist",
     "develop": "babel lib -w -d dist",
-    "test": "tape test/*.test.js"
+    "test": "cd test && gulp && tape *.test.js"
   },
   "repository": {
     "type": "git",

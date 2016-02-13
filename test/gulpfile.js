@@ -6,7 +6,7 @@ var gulp = require('gulp');
 var Parser = require('../dist');
 
 gulp.task('default', function(t) {
-  gulp.src('./fixtures/*.rogain')
+  return gulp.src('./fixtures/*.rogain')
     .pipe(Parser.gulp({
       components: { Wrapper: null },
       helpers: { If: null },

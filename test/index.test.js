@@ -29,6 +29,22 @@ test('parser.parseStream()', function(t) {
     }))
 });
 
+test('Parser.gulp(config)', function(t) {
+  t.plan(9);
+  fs.readFile(__dirname + '/fixtures/out/Simple.json', function(err, json) {
+    var tree = JSON.parse(json);
+    t.equal(tree !== undefined, true);
+    t.equal(tree.type, 'tag');
+    t.equal(tree.attrs[0].name, 'class');
+    t.equal(tree.attrs[1].data[0].type, 'variable');
+    t.equal(tree.attrs[1].data[0].path, 'keys');
+    t.equal(tree.attrs[1].data[0].filters[0].name, 'join');
+    t.equal(tree.children[0].type, 'textnode');
+    t.equal(tree.children[0].data[0].type, 'variable');
+    t.equal(tree.children[0].data[0].path, '@children');
+  });
+});
+
 test('parser.parse()', function(t) {
   t.plan(9);
   parser.parse('<div class="{mooger} block" data-{key}={keys|join}>{@children}</div>', tree => {
