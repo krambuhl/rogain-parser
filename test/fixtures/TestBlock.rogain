@@ -1,0 +1,3 @@
+<div class="block" style="background-color: #{@data.hex}">
+  {@data.name}
+</div>

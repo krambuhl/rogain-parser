@@ -1,0 +1,183 @@
+{
+  "type": "tag",
+  "tagName": "div",
+  "children": [
+    {
+      "type": "component",
+      "name": "TestBlock",
+      "attrs": [
+        {
+          "name": [
+            {
+              "type": "variable",
+              "path": "data"
+            }
+          ],
+          "value": [
+            {
+              "type": "variable",
+              "path": "colors",
+              "filters": [
+                {
+                  "name": "first"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "component",
+      "name": "TestComponent",
+      "attrs": [
+        {
+          "name": "id",
+          "value": "colors"
+        }
+      ],
+      "children": [
+        {
+          "type": "component",
+          "name": "TestBlock",
+          "attrs": [
+            {
+              "name": "data",
+              "value": [
+                {
+                  "type": "variable",
+                  "path": "colors",
+                  "filters": [
+                    {
+                      "name": "last"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "tag",
+          "tagName": "a",
+          "attrs": [
+            {
+              "name": "href",
+              "value": "/colors"
+            }
+          ],
+          "children": [
+            {
+              "type": "node",
+              "value": [
+                {
+                  "type": "text",
+                  "value": "Read More"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "helper",
+      "name": "Each",
+      "attrs": [
+        {
+          "name": "data",
+          "value": [
+            {
+              "type": "variable",
+              "path": "colors"
+            }
+          ]
+        },
+        {
+          "name": "as",
+          "value": "color"
+        }
+      ],
+      "children": [
+        {
+          "type": "component",
+          "name": "TestBlock",
+          "attrs": [
+            {
+              "name": "data",
+              "value": [
+                {
+                  "type": "variable",
+                  "path": "color"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "component",
+          "name": "Defined",
+          "attrs": [
+            {
+              "name": "data",
+              "value": [
+                {
+                  "type": "variable",
+                  "path": "color.slug"
+                }
+              ]
+            }
+          ],
+          "children": [
+            {
+              "type": "tag",
+              "tagName": "a",
+              "attrs": [
+                {
+                  "name": "href",
+                  "value": [
+                    {
+                      "type": "text",
+                      "value": "/colors/"
+                    },
+                    {
+                      "type": "variable",
+                      "path": "color.slug"
+                    }
+                  ]
+                }
+              ],
+              "children": [
+                {
+                  "type": "node",
+                  "value": [
+                    {
+                      "type": "text",
+                      "value": "Read More"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "script",
+      "name": "script",
+      "attrs": [
+        {
+          "name": "src",
+          "value": [
+            {
+              "type": "variable",
+              "path": "scripts.main"
+            }
+          ]
+        }
+      ],
+      "data": "\n    function hello(str) { }\n  "
+    }
+  ]
+}

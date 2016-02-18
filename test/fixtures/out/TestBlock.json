@@ -1,0 +1,42 @@
+{
+  "type": "tag",
+  "tagName": "div",
+  "attrs": [
+    {
+      "name": "class",
+      "value": "block"
+    },
+    {
+      "name": "style",
+      "value": [
+        {
+          "type": "text",
+          "value": "background-color: #"
+        },
+        {
+          "type": "variable",
+          "path": "@data.hex"
+        }
+      ]
+    }
+  ],
+  "children": [
+    {
+      "type": "node",
+      "value": [
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "variable",
+          "path": "@data.name"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    }
+  ]
+}

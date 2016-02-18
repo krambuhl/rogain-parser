@@ -1,1 +1,52 @@
-{"type":"tag","tagName":"div","attrs":[{"name":"class","data":[{"type":"variable","path":"mooger"},{"type":"text","value":" block"}]},{"name":[{"type":"text","value":"data-"},{"type":"variable","path":"key"}],"data":[{"type":"variable","path":"keys","filters":[{"name":"join"}]}]}],"children":[{"type":"textnode","data":[{"type":"variable","path":"@children"}]}]}
+{
+  "type": "tag",
+  "tagName": "div",
+  "attrs": [
+    {
+      "name": "class",
+      "value": [
+        {
+          "type": "variable",
+          "path": "mooger"
+        },
+        {
+          "type": "text",
+          "value": " block"
+        }
+      ]
+    },
+    {
+      "name": [
+        {
+          "type": "text",
+          "value": "data-"
+        },
+        {
+          "type": "variable",
+          "path": "key"
+        }
+      ],
+      "value": [
+        {
+          "type": "variable",
+          "path": "keys",
+          "filters": [
+            {
+              "name": "join"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "children": [
+    {
+      "type": "node",
+      "value": [
+        {
+          "type": "children"
+        }
+      ]
+    }
+  ]
+}
