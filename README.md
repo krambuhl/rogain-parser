@@ -6,13 +6,17 @@ Parses html strings with [rogain](https://www.npmjs.com/package/rogain) flavor i
 
 ```js
 import Parser from 'rogain-parser';
+import { hasAttribute } from 'rogain-tree-utils';
 
 // config can be defined with no contents for parser
 const parser = new Parser({ helpers: { If: null } });
 
 parser.parse('<div class="block" data-key={key}>{@children}</div>', tree => {
-    console.log(tree.attrs[0].name === 'class') // true
-    console.log(tree.children[0].data[0].path === '@children') // true
+    hasAttribute(tree, 'data-key'); // true
+    hasAttribute(tree, { 'class': 'block' }); // true
+
+    var childrenVal = find(tree.children, { type: 'node' }).value
+    find(childrenVal, { type: 'children' }).length > 0 // true 
 })
 ```
 
@@ -48,30 +52,29 @@ ___callback___
 Function.  Called when parsing is complete.
 
 ```js
-const template = '<div class="block" data-key={key}>{@children}</div>';
+const template = '<Box class="heavy" data-key={key}>{@children}</Box>';
 ```
 
 #### Example tree 
 
 ```json
 {
-  "type": "tag",
-  "tagName": "div",
+  "type": "component",
+  "name": "Box",
   "attrs": [{
     "name": "class",
-    "value": "block"
+    "value": "heavy"
   },{
     "name": "data-key",
-    "data": [{
+    "value": [{
       "type": "variable",
       "path": "key"
     }]
   }],
   "children": [{
-    "type": "textnode",
-    "data": [{
-      "type": "variable",
-      "path": "@children"
+    "type": "node",
+    "value": [{
+        "type": "children"
     }]
   }]
 }
