@@ -6,17 +6,16 @@ Parses html strings with [rogain](https://www.npmjs.com/package/rogain) flavor i
 
 ```js
 import Parser from 'rogain-parser';
-import { hasAttribute } from 'rogain-tree-utils';
+import { find, hasAttribute } from 'rogain-tree-utils';
 
 // config can be defined with no contents for parser
-const parser = new Parser({ helpers: { If: null } });
+const parser = new Parser({ helpers: { Children: null } });
 
-parser.parse('<div class="block" data-key={key}>{@children}</div>', tree => {
+parser.parse('<div class="block" data-key={key}><Children /></div>', tree => {
     hasAttribute(tree, 'data-key'); // true
+    find(getAttribute(tree, 'data-key'), { type: 'variable', path: 'key' }); // true
     hasAttribute(tree, { 'class': 'block' }); // true
-
-    var childrenVal = find(tree.children, { type: 'node' }).value
-    find(childrenVal, { type: 'children' }).length > 0 // true 
+    find(tree.children, { type: 'helper', name: 'Children' }).length // 1
 })
 ```
 
@@ -52,7 +51,7 @@ ___callback___
 Function.  Called when parsing is complete.
 
 ```js
-const template = '<Box class="heavy" data-key={key}>{@children}</Box>';
+const template = '<Box class="heavy" data-key={key}><Children /></Box>';
 ```
 
 #### Example tree 
@@ -63,18 +62,19 @@ const template = '<Box class="heavy" data-key={key}>{@children}</Box>';
   "name": "Box",
   "attrs": [{
     "name": "class",
-    "value": "heavy"
+    "data": "heavy"
   },{
     "name": "data-key",
-    "value": [{
+    "data": [{
       "type": "variable",
       "path": "key"
     }]
   }],
   "children": [{
     "type": "node",
-    "value": [{
-        "type": "children"
+    "data": [{
+        "type": "helper",
+        "name": "Children"
     }]
   }]
 }
@@ -88,24 +88,6 @@ Creates a through stream that resolves with a tree when parsing is complete.
 fs.createReadStream(__dirname + '/MyForm.rogain')
     .pipe(parser.parseStream())
     .pipe(fs.createWriteStream(__dirname + '/MyForm.json'))
-```
-
-
-## Parser.gulp(config[, options])
-
-Helper function for gulp builds.  Creates a `Parser` instance that takes a gulp stream as input and outputs a through stream.
-
-___config___
-
-Rogain config or Object.
-
-```js
-gulp.src('./components/*.rogain')
-    .pipe(Parser.gulp({
-        helpers: { If: null, Unless: null, Each: null }
-        filters: { first: null, last: null }
-    }))
-    .pipe(gulp.dest('./compiled-components'))
 ```
 
 ## Install 

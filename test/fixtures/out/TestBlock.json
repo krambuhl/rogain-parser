@@ -4,14 +4,14 @@
   "attrs": [
     {
       "name": "class",
-      "value": "block"
+      "data": "block"
     },
     {
       "name": "style",
-      "value": [
+      "data": [
         {
           "type": "text",
-          "value": "background-color: #"
+          "data": "background-color: #"
         },
         {
           "type": "variable",
@@ -23,10 +23,10 @@
   "children": [
     {
       "type": "node",
-      "value": [
+      "data": [
         {
           "type": "text",
-          "value": "\n  "
+          "data": "\n  "
         },
         {
           "type": "variable",
@@ -34,7 +34,7 @@
         },
         {
           "type": "text",
-          "value": "\n"
+          "data": "\n"
         }
       ]
     }

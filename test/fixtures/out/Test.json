@@ -13,7 +13,7 @@
               "path": "data"
             }
           ],
-          "value": [
+          "data": [
             {
               "type": "variable",
               "path": "colors",
@@ -33,7 +33,7 @@
       "attrs": [
         {
           "name": "id",
-          "value": "colors"
+          "data": "colors"
         }
       ],
       "children": [
@@ -43,7 +43,7 @@
           "attrs": [
             {
               "name": "data",
-              "value": [
+              "data": [
                 {
                   "type": "variable",
                   "path": "colors",
@@ -63,18 +63,13 @@
           "attrs": [
             {
               "name": "href",
-              "value": "/colors"
+              "data": "/colors"
             }
           ],
           "children": [
             {
               "type": "node",
-              "value": [
-                {
-                  "type": "text",
-                  "value": "Read More"
-                }
-              ]
+              "data": "Read More"
             }
           ]
         }
@@ -86,7 +81,7 @@
       "attrs": [
         {
           "name": "data",
-          "value": [
+          "data": [
             {
               "type": "variable",
               "path": "colors"
@@ -95,7 +90,7 @@
         },
         {
           "name": "as",
-          "value": "color"
+          "data": "color"
         }
       ],
       "children": [
@@ -105,7 +100,7 @@
           "attrs": [
             {
               "name": "data",
-              "value": [
+              "data": [
                 {
                   "type": "variable",
                   "path": "color"
@@ -120,7 +115,7 @@
           "attrs": [
             {
               "name": "data",
-              "value": [
+              "data": [
                 {
                   "type": "variable",
                   "path": "color.slug"
@@ -135,10 +130,10 @@
               "attrs": [
                 {
                   "name": "href",
-                  "value": [
+                  "data": [
                     {
                       "type": "text",
-                      "value": "/colors/"
+                      "data": "/colors/"
                     },
                     {
                       "type": "variable",
@@ -150,12 +145,7 @@
               "children": [
                 {
                   "type": "node",
-                  "value": [
-                    {
-                      "type": "text",
-                      "value": "Read More"
-                    }
-                  ]
+                  "data": "Read More"
                 }
               ]
             }
@@ -169,7 +159,7 @@
       "attrs": [
         {
           "name": "src",
-          "value": [
+          "data": [
             {
               "type": "variable",
               "path": "scripts.main"

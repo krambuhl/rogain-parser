@@ -4,14 +4,14 @@
   "attrs": [
     {
       "name": "class",
-      "value": [
+      "data": [
         {
           "type": "variable",
           "path": "mooger"
         },
         {
           "type": "text",
-          "value": " block"
+          "data": " block"
         }
       ]
     },
@@ -19,14 +19,14 @@
       "name": [
         {
           "type": "text",
-          "value": "data-"
+          "data": "data-"
         },
         {
           "type": "variable",
           "path": "key"
         }
       ],
-      "value": [
+      "data": [
         {
           "type": "variable",
           "path": "keys",
@@ -41,12 +41,8 @@
   ],
   "children": [
     {
-      "type": "node",
-      "value": [
-        {
-          "type": "children"
-        }
-      ]
+      "type": "helper",
+      "name": "Children"
     }
   ]
 }

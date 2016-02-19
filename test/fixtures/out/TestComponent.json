@@ -4,17 +4,13 @@
   "attrs": [
     {
       "name": "class",
-      "value": "component"
+      "data": "component"
     }
   ],
   "children": [
     {
-      "type": "node",
-      "value": [
-        {
-          "type": "children"
-        }
-      ]
+      "type": "helper",
+      "name": "Children"
     }
   ]
 }

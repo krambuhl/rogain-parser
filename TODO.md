@@ -1,2 +1,0 @@
-- textnode => node
-- tree.type === 'children' instead of tree.path == '@children'
