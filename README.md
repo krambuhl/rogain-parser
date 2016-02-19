@@ -13,7 +13,6 @@ const parser = new Parser({ helpers: { Children: null } });
 
 parser.parse('<div class="block" data-key={key}><Children /></div>', tree => {
     hasAttribute(tree, 'data-key'); // true
-    find(getAttribute(tree, 'data-key'), { type: 'variable', path: 'key' }); // true
     hasAttribute(tree, { 'class': 'block' }); // true
     find(tree.children, { type: 'helper', name: 'Children' }).length // 1
 })
