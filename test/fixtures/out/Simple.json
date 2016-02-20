@@ -3,6 +3,7 @@
   "tagName": "div",
   "attrs": [
     {
+      "type": "attr",
       "name": "class",
       "data": [
         {
@@ -16,6 +17,7 @@
       ]
     },
     {
+      "type": "attr",
       "name": [
         {
           "type": "text",

@@ -3,6 +3,7 @@
   "tagName": "div",
   "attrs": [
     {
+      "type": "attr",
       "name": "class",
       "data": "component"
     }

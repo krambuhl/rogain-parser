@@ -7,6 +7,7 @@
       "name": "TestBlock",
       "attrs": [
         {
+          "type": "attr",
           "name": [
             {
               "type": "variable",
@@ -32,6 +33,7 @@
       "name": "TestComponent",
       "attrs": [
         {
+          "type": "attr",
           "name": "id",
           "data": "colors"
         }
@@ -42,6 +44,7 @@
           "name": "TestBlock",
           "attrs": [
             {
+              "type": "attr",
               "name": "data",
               "data": [
                 {
@@ -62,6 +65,7 @@
           "tagName": "a",
           "attrs": [
             {
+              "type": "attr",
               "name": "href",
               "data": "/colors"
             }
@@ -80,6 +84,7 @@
       "name": "Each",
       "attrs": [
         {
+          "type": "attr",
           "name": "data",
           "data": [
             {
@@ -89,6 +94,7 @@
           ]
         },
         {
+          "type": "attr",
           "name": "as",
           "data": "color"
         }
@@ -99,6 +105,7 @@
           "name": "TestBlock",
           "attrs": [
             {
+              "type": "attr",
               "name": "data",
               "data": [
                 {
@@ -114,6 +121,7 @@
           "name": "Defined",
           "attrs": [
             {
+              "type": "attr",
               "name": "data",
               "data": [
                 {
@@ -129,6 +137,7 @@
               "tagName": "a",
               "attrs": [
                 {
+                  "type": "attr",
                   "name": "href",
                   "data": [
                     {
@@ -158,6 +167,7 @@
       "name": "script",
       "attrs": [
         {
+          "type": "attr",
           "name": "src",
           "data": [
             {

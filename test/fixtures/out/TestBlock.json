@@ -3,15 +3,36 @@
   "tagName": "div",
   "attrs": [
     {
+      "type": "attr",
+      "name": [
+        {
+          "type": "text",
+          "data": "data-"
+        },
+        {
+          "type": "variable",
+          "path": "propName"
+        }
+      ],
+      "data": [
+        {
+          "type": "variable",
+          "path": "valName"
+        }
+      ]
+    },
+    {
+      "type": "attr",
       "name": "class",
       "data": "block"
     },
     {
-      "name": "style",
+      "type": "attr",
+      "name": "data-hex",
       "data": [
         {
           "type": "text",
-          "data": "background-color: #"
+          "data": "#"
         },
         {
           "type": "variable",
