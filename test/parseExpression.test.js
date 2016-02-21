@@ -5,14 +5,14 @@ test('parseExpression(exp) :: simple var', function(t) {
   t.plan(2);
   var res = parseExpression('title');
   t.equal(res.path, 'title');
-  t.equal(res.filters.length, 0);
+  t.equal(res.filters === undefined, true);
 });
 
 test('parseExpression(exp) :: complex var', function(t) {
   t.plan(2);
   var res = parseExpression('item.0.title');
   t.equal(res.path, 'item.0.title');
-  t.equal(res.filters.length, 0);
+  t.equal(res.filters === undefined, true);
 });
 
 test('parseExpression(exp) :: single filter', function(t) {

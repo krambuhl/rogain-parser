@@ -10,14 +10,14 @@
           "data": "data-"
         },
         {
-          "type": "variable",
-          "path": "propName"
+          "path": "propName",
+          "type": "variable"
         }
       ],
       "data": [
         {
-          "type": "variable",
-          "path": "valName"
+          "path": "valName",
+          "type": "variable"
         }
       ]
     },
@@ -35,8 +35,8 @@
           "data": "#"
         },
         {
-          "type": "variable",
-          "path": "@data.hex"
+          "path": "@data.hex",
+          "type": "variable"
         }
       ]
     }
@@ -46,8 +46,8 @@
       "type": "node",
       "data": [
         {
-          "type": "variable",
-          "path": "@data.name"
+          "path": "@data.name",
+          "type": "variable"
         }
       ]
     }

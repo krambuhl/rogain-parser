@@ -7,8 +7,8 @@
       "name": "class",
       "data": [
         {
-          "type": "variable",
-          "path": "mooger"
+          "path": "mooger",
+          "type": "variable"
         },
         {
           "type": "text",
@@ -24,19 +24,19 @@
           "data": "data-"
         },
         {
-          "type": "variable",
-          "path": "key"
+          "path": "key",
+          "type": "variable"
         }
       ],
       "data": [
         {
-          "type": "variable",
           "path": "keys",
           "filters": [
             {
               "name": "join"
             }
-          ]
+          ],
+          "type": "variable"
         }
       ]
     }

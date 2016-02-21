@@ -6,8 +6,8 @@
       "type": "component",
       "name": [
         {
-          "type": "variable",
-          "path": "tag"
+          "path": "tag",
+          "type": "variable"
         }
       ],
       "attrs": [
@@ -27,8 +27,8 @@
           "name": "tagName",
           "data": [
             {
-              "type": "variable",
-              "path": "tag"
+              "path": "tag",
+              "type": "variable"
             }
           ]
         },
@@ -36,19 +36,19 @@
           "type": "attr",
           "name": [
             {
-              "type": "variable",
-              "path": "data"
+              "path": "data",
+              "type": "variable"
             }
           ],
           "data": [
             {
-              "type": "variable",
               "path": "colors",
               "filters": [
                 {
                   "name": "first"
                 }
-              ]
+              ],
+              "type": "variable"
             }
           ]
         }
@@ -74,13 +74,13 @@
               "name": "data",
               "data": [
                 {
-                  "type": "variable",
                   "path": "colors",
                   "filters": [
                     {
                       "name": "last"
                     }
-                  ]
+                  ],
+                  "type": "variable"
                 }
               ]
             }
@@ -109,8 +109,8 @@
       "type": "component",
       "name": [
         {
-          "type": "variable",
-          "path": "component"
+          "path": "component",
+          "type": "variable"
         }
       ],
       "attrs": [
@@ -119,8 +119,8 @@
           "name": "data",
           "data": [
             {
-              "type": "variable",
-              "path": "colors"
+              "path": "colors",
+              "type": "variable"
             }
           ]
         },
@@ -140,8 +140,8 @@
               "name": "data",
               "data": [
                 {
-                  "type": "variable",
-                  "path": "color"
+                  "path": "color",
+                  "type": "variable"
                 }
               ]
             }
@@ -156,8 +156,8 @@
               "name": "data",
               "data": [
                 {
-                  "type": "variable",
-                  "path": "color.slug"
+                  "path": "color.slug",
+                  "type": "variable"
                 }
               ]
             }
@@ -176,8 +176,8 @@
                       "data": "/colors/"
                     },
                     {
-                      "type": "variable",
-                      "path": "color.slug"
+                      "path": "color.slug",
+                      "type": "variable"
                     }
                   ]
                 }
@@ -202,8 +202,8 @@
           "name": "src",
           "data": [
             {
-              "type": "variable",
-              "path": "scripts.main"
+              "path": "scripts.main",
+              "type": "variable"
             }
           ]
         }
