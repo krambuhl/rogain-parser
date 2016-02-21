@@ -1,10 +1,8 @@
 var fs = require('fs');
 var test = require('tape');
 var through = require('through2');
-var gulp = require('gulp');
 
-var tutils = require('rogain-tree-utils');
-var Parser = require('../dist');
+var Parser = require('../dist/Parser');
 
 var parser = new Parser({
   helpers: { Children: null },
