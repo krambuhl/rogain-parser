@@ -4,8 +4,34 @@
   "children": [
     {
       "type": "component",
+      "name": [
+        {
+          "type": "variable",
+          "path": "tag"
+        }
+      ],
+      "attrs": [
+        {
+          "type": "attr",
+          "name": "no-children",
+          "data": "no-children"
+        }
+      ]
+    },
+    {
+      "type": "component",
       "name": "TestBlock",
       "attrs": [
+        {
+          "type": "attr",
+          "name": "tagName",
+          "data": [
+            {
+              "type": "variable",
+              "path": "tag"
+            }
+          ]
+        },
         {
           "type": "attr",
           "name": [
@@ -80,8 +106,13 @@
       ]
     },
     {
-      "type": "helper",
-      "name": "Each",
+      "type": "component",
+      "name": [
+        {
+          "type": "variable",
+          "path": "component"
+        }
+      ],
       "attrs": [
         {
           "type": "attr",
@@ -177,7 +208,12 @@
           ]
         }
       ],
-      "data": "\n    function hello(str) { }\n  "
+      "children": [
+        {
+          "data": "\n    function hello(str) { }\n  ",
+          "type": "text"
+        }
+      ]
     }
   ]
 }

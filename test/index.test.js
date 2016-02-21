@@ -3,14 +3,13 @@ var test = require('tape');
 var through = require('through2');
 var gulp = require('gulp');
 
-var tutils = require('./utils/tree');
+var tutils = require('rogain-tree-utils');
 var Parser = require('../dist');
 
 var parser = new Parser({
   helpers: { Children: null },
   filter: { join: null } 
 });
-
 
 
 test('parser.parse()', function(t) {
@@ -43,19 +42,3 @@ test('parser.parseStream()', function(t) {
       t.equal(tree.children[0].name, 'Children');
     }))
 });
-
-test('Parser.gulp(config)', function(t) {
-  t.plan(8);
-  fs.readFile(__dirname + '/fixtures/out/Simple.json', function(err, json) {
-    var tree = JSON.parse(json);
-    t.equal(tree !== undefined, true);
-    t.equal(tree.type, 'tag');
-    t.equal(tree.attrs[0].name, 'class');
-    t.equal(tree.attrs[1].data[0].type, 'variable');
-    t.equal(tree.attrs[1].data[0].path, 'keys');
-    t.equal(tree.attrs[1].data[0].filters[0].name, 'join');
-    t.equal(tree.children[0].type, 'helper');
-    t.equal(tree.children[0].name, 'Children');
-  });
-});
-

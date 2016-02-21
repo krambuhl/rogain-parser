@@ -46,16 +46,8 @@
       "type": "node",
       "data": [
         {
-          "type": "text",
-          "data": "\n  "
-        },
-        {
           "type": "variable",
           "path": "@data.name"
-        },
-        {
-          "type": "text",
-          "data": "\n"
         }
       ]
     }
