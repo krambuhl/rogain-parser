@@ -6,15 +6,14 @@ Parses html strings with [rogain](https://www.npmjs.com/package/rogain) flavor i
 
 ```js
 import Parser from 'rogain-parser';
-import { find, hasAttribute } from 'rogain-tree-utils';
 
 // config can be defined with no contents for parser
 const parser = new Parser({ helpers: { Children: null } });
 
 parser.parse('<div class="block" data-key={key}><Children /></div>', tree => {
-    hasAttribute(tree, 'data-key'); // true
-    hasAttribute(tree, { 'class': 'block' }); // true
-    find(tree.children, { type: 'helper', name: 'Children' }).length // 1
+  console.log(tree.tagName) // div
+  console.log(tree.attrs[0]) // { type: 'attr', name: 'class', data: 'block' }
+  console.log(tree.children[0]) // { type: 'helper', name: 'Children' }
 })
 ```
 
@@ -60,9 +59,11 @@ const template = '<Box class="heavy" data-key={key}><Children /></Box>';
   "type": "component",
   "name": "Box",
   "attrs": [{
+    "type": "attr",
     "name": "class",
     "data": "heavy"
   },{
+    "type": "attr",
     "name": "data-key",
     "data": [{
       "type": "variable",

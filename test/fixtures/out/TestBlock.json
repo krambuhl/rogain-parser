@@ -43,7 +43,7 @@
   ],
   "children": [
     {
-      "type": "node",
+      "type": "text",
       "data": [
         {
           "path": "@data.name",

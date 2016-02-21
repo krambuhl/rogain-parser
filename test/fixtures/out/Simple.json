@@ -33,6 +33,7 @@
           "path": "keys",
           "filters": [
             {
+              "type": "filter",
               "name": "join"
             }
           ],

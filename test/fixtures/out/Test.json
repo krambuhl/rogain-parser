@@ -45,6 +45,7 @@
               "path": "colors",
               "filters": [
                 {
+                  "type": "filter",
                   "name": "first"
                 }
               ],
@@ -77,6 +78,7 @@
                   "path": "colors",
                   "filters": [
                     {
+                      "type": "filter",
                       "name": "last"
                     }
                   ],
@@ -98,7 +100,7 @@
           ],
           "children": [
             {
-              "type": "node",
+              "type": "text",
               "data": "Read More"
             }
           ]
@@ -184,7 +186,7 @@
               ],
               "children": [
                 {
-                  "type": "node",
+                  "type": "text",
                   "data": "Read More"
                 }
               ]
