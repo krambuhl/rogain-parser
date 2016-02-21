@@ -38,15 +38,15 @@ Object. Optional. Related to the [htmlparser](https://github.com/tautologistics/
 
 ### parse(template, callback)
 
-Parses template into json tree.  Calls callback function when complete.
+Parses template into json tree. Calls callback function when complete.
 
 ___template___
 
-String. Rogain html'ish template.
+String. Rogain template.
 
 ___callback___
 
-Function.  Called when parsing is complete.
+Function. Called when parsing is complete.
 
 ```js
 const template = '<Box class="heavy" data-key={key}><Children /></Box>';
