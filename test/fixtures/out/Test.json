@@ -1,6 +1,6 @@
 {
   "type": "tag",
-  "tagName": "div",
+  "name": "div",
   "children": [
     {
       "type": "component",
@@ -90,7 +90,7 @@
         },
         {
           "type": "tag",
-          "tagName": "a",
+          "name": "a",
           "attrs": [
             {
               "type": "attr",
@@ -167,7 +167,7 @@
           "children": [
             {
               "type": "tag",
-              "tagName": "a",
+              "name": "a",
               "attrs": [
                 {
                   "type": "attr",
@@ -196,7 +196,7 @@
       ]
     },
     {
-      "type": "script",
+      "type": "tag",
       "name": "script",
       "attrs": [
         {

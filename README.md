@@ -11,7 +11,7 @@ import Parser from 'rogain-parser';
 const parser = new Parser({ helpers: { Children: null } });
 
 parser.parse('<div class="block" data-key={key}><Children /></div>', tree => {
-  console.log(tree.tagName) // div
+  console.log(tree.name) // div
   console.log(tree.attrs[0]) // { type: 'attr', name: 'class', data: 'block' }
   console.log(tree.children[0]) // { type: 'helper', name: 'Children' }
 })

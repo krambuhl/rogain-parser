@@ -1,6 +1,6 @@
 {
   "name": "rogain-parser",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Rogain parser that converts html templates into json trees",
   "main": "dist/index.js",
   "scripts": {

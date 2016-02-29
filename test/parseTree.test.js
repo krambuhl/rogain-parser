@@ -15,7 +15,7 @@ test('parseTree(dom) :: dom.name - unwrap text', function(t) {
   var res = parseTree({ type: 'tag', name: 'a' }, helpers);
   t.plan(2);
   t.equal(res.type, 'tag');
-  t.equal(res.tagName, 'a');
+  t.equal(res.name, 'a');
 });
 
 test('parseTree(dom) :: dom.attribs', function(t) {
@@ -48,7 +48,7 @@ test('parseTree(dom) :: dom.children - not script', function(t) {
   var res = parseTree({ type: 'tag', name: 'a', children: children }, helpers);
   t.plan(4);
   t.equal(res.type, 'tag');
-  t.equal(res.tagName, 'a');
+  t.equal(res.name, 'a');
   t.equal(res.children[0].type, 'text');
   t.equal(res.children[0].data, 'monkies');
 });
@@ -57,7 +57,7 @@ test('parseTree(dom) :: dom.children - script tag', function(t) {
   var children = [{ "type": "text", "data": "monkies" }];
   var res = parseTree({ type: 'script', name: 'script', children: children }, helpers);
   t.plan(4);
-  t.equal(res.type, 'script');
+  t.equal(res.type, 'tag');
   t.equal(res.name, 'script');
   t.equal(res.children[0].type, 'text');
   t.equal(res.children[0].data, 'monkies');

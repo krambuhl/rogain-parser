@@ -2,11 +2,9 @@ var test = require('tape');
 var parseString = require('../dist/parseString');
 
 test('parseString(str) :: simple string', function(t) {
-  t.plan(3);
+  t.plan(1);
   var res = parseString('title');
-  t.equal(res.length, 1);
-  t.equal(res[0].type, 'text');
-  t.equal(res[0].data, 'title');
+  t.equal(res, 'title');
 });
 
 test('parseString(str) :: single variable', function(t) {

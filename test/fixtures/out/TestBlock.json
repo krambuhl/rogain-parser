@@ -1,6 +1,6 @@
 {
   "type": "tag",
-  "tagName": "div",
+  "name": "div",
   "attrs": [
     {
       "type": "attr",
