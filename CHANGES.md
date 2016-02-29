@@ -1,5 +1,9 @@
 # Change Log
 
+### 0.3.2
+
+- Removed unused dependencies.
+
 ### 0.3.1
 
 - Updates tag tree output from `tagName` to `name`.
