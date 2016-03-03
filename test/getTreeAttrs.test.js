@@ -36,9 +36,9 @@ test('getTreeAttrs(attrs) :: multiple', function(t) {
 });
 
 test('getTreeAttrs(attrs) :: complex', function(t) {
-  t.plan(8);
+  t.plan(7);
 
-  var res = getTreeAttrs({ '{data}': 'bungle {colors|first}' });
+  var res = getTreeAttrs({ '{data}': 'bungle {colors}' });
   
   t.equal(res[0].type, 'attr');
   t.equal(res[0].name[0].type, 'variable');
@@ -47,5 +47,4 @@ test('getTreeAttrs(attrs) :: complex', function(t) {
   t.equal(res[0].data[0].data, 'bungle ');
   t.equal(res[0].data[1].type, 'variable');
   t.equal(res[0].data[1].path, 'colors');
-  t.equal(res[0].data[1].filters.length, 1);
 });

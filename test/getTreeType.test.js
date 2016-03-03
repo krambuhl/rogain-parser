@@ -9,12 +9,6 @@ test('getTreeType(tree) :: tag', function(t) {
   t.equal(res, 'tag');
 });
 
-test('getTreeType(tree) :: helper', function(t) {
-  t.plan(1);
-  var res = getTreeType({ type: "tag", name: "Each" }, helpers);
-  t.equal(res, 'helper');
-});
-
 test('getTreeType(tree) :: variable', function(t) {
   t.plan(1);
   var res = getTreeType({ type: "tag", name: "{tagName}" }, helpers);

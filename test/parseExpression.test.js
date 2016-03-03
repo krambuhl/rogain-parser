@@ -15,7 +15,7 @@ test('parseExpression(exp) :: complex var', function(t) {
   t.equal(res.filters === undefined, true);
 });
 
-test('parseExpression(exp) :: single filter', function(t) {
+test.skip('parseExpression(exp) :: single filter', function(t) {
   t.plan(4);
   var res = parseExpression('title|titleCase');
   t.equal(res.path, 'title');
@@ -24,7 +24,7 @@ test('parseExpression(exp) :: single filter', function(t) {
   t.equal(res.filters[0].name, 'titleCase');
 });
 
-test('parseExpression(exp) :: multi filters', function(t) {
+test.skip('parseExpression(exp) :: multi filters', function(t) {
   t.plan(6);
   var res = parseExpression('title|first|second');
   t.equal(res.path, 'title');
@@ -35,7 +35,7 @@ test('parseExpression(exp) :: multi filters', function(t) {
   t.equal(res.filters[1].name, 'second');
 });
 
-test('parseExpression(exp) :: complex / multi filters', function(t) {
+test.skip('parseExpression(exp) :: complex / multi filters', function(t) {
   t.plan(8);
   var res = parseExpression('item.0.title|first|second|third');
   t.equal(res.path, 'item.0.title');

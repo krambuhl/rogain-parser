@@ -1,17 +1,17 @@
 <div>
-  <{tag} no-children />
-  <TestBlock tagName={tag} {data}={colors|first} />
+  <TestBlock tagName={tag} {data}={colors.0} />
   <TestComponent id="colors">
-    <TestBlock data={colors|last} />
+    <TestBlock data={colors.1} />
     <a href="/colors">Read More</a>
   </TestComponent>
-  <{component} data={colors} as="color">
+  <Each data={colors} as="color">
     <TestBlock data={color} />
     <Defined data={color.slug}>
       <a href="/colors/{color.slug}">Read More</a>
     </Defined>
-  </{component}>
+  </Each>
   <script src={scripts.main}>
     function hello(str) { }
   </script>
 </div>
+

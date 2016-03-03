@@ -14,6 +14,12 @@ test('isSingleTextTree(treeList) :: single text list', function(t) {
   t.equal(isSingleTextTree(slist), true);
 });
 
+var solist = [{ type: "component", name: "ReadMore" }];
+test('isSingleTextTree(treeList) :: single other list', function(t) {
+  t.plan(1);
+  t.equal(isSingleTextTree(solist), false);
+});
+
 var mlist = [
   { type: "text", data: "Item 1" },
   { type: "text", data: "Item 2" },
@@ -25,7 +31,7 @@ test('isSingleTextTree(treeList) :: multiple text list', function(t) {
 });
 
 var mxlist = [
-  { type: "helper", name: "Helper" },
+  { type: "component", name: "Helper" },
   { type: "text", data: "Read More" }
 ];
 test('isSingleTextTree(treeList) :: multiple mixed list', function(t) {
@@ -34,7 +40,7 @@ test('isSingleTextTree(treeList) :: multiple mixed list', function(t) {
 });
 
 var molist = [
-  { type: "helper", name: "Helper" },
+  { type: "component", name: "Helper" },
   { type: "component", name: "Heading" }
 ];
 test('isSingleTextTree(treeList) :: multiple other list', function(t) {
@@ -42,7 +48,7 @@ test('isSingleTextTree(treeList) :: multiple other list', function(t) {
   t.equal(isSingleTextTree(molist), false);
 });
 
-var nslist = [{ type: "helper", name: "Helper" }];
+var nslist = [{ type: "component", name: "Helper" }];
 test('isSingleTextTree(treeList) :: single other list', function(t) {
   t.plan(1);
   t.equal(isSingleTextTree(nslist), false);

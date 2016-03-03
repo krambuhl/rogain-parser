@@ -31,12 +31,6 @@
       "data": [
         {
           "path": "keys",
-          "filters": [
-            {
-              "type": "filter",
-              "name": "join"
-            }
-          ],
           "type": "variable"
         }
       ]
@@ -44,7 +38,7 @@
   ],
   "children": [
     {
-      "type": "helper",
+      "type": "component",
       "name": "Children"
     }
   ]

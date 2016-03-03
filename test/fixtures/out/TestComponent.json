@@ -1,16 +1,26 @@
 {
-  "type": "tag",
-  "name": "div",
+  "type": "component",
+  "name": "Box",
   "attrs": [
     {
       "type": "attr",
       "name": "class",
-      "data": "component"
+      "data": "heavy"
+    },
+    {
+      "type": "attr",
+      "name": "data-key",
+      "data": [
+        {
+          "path": "key",
+          "type": "variable"
+        }
+      ]
     }
   ],
   "children": [
     {
-      "type": "helper",
+      "type": "component",
       "name": "Children"
     }
   ]

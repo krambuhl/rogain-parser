@@ -4,22 +4,6 @@
   "children": [
     {
       "type": "component",
-      "name": [
-        {
-          "path": "tag",
-          "type": "variable"
-        }
-      ],
-      "attrs": [
-        {
-          "type": "attr",
-          "name": "no-children",
-          "data": "no-children"
-        }
-      ]
-    },
-    {
-      "type": "component",
       "name": "TestBlock",
       "attrs": [
         {
@@ -42,13 +26,7 @@
           ],
           "data": [
             {
-              "path": "colors",
-              "filters": [
-                {
-                  "type": "filter",
-                  "name": "first"
-                }
-              ],
+              "path": "colors.0",
               "type": "variable"
             }
           ]
@@ -75,13 +53,7 @@
               "name": "data",
               "data": [
                 {
-                  "path": "colors",
-                  "filters": [
-                    {
-                      "type": "filter",
-                      "name": "last"
-                    }
-                  ],
+                  "path": "colors.1",
                   "type": "variable"
                 }
               ]
@@ -109,12 +81,7 @@
     },
     {
       "type": "component",
-      "name": [
-        {
-          "path": "component",
-          "type": "variable"
-        }
-      ],
+      "name": "Each",
       "attrs": [
         {
           "type": "attr",

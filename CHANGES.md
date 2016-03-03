@@ -1,5 +1,9 @@
 # Change Log
 
+### 0.4.0
+
+- Removes `helper` tree type, `component` type will cover both helper and components.
+
 ### 0.3.2
 
 - Removed unused dependencies.
