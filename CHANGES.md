@@ -1,5 +1,10 @@
 # Change Log
 
+### 0.5.0 
+
+- Removed `parseStream`.
+- Parser now uses promises to hide the OOP style `htmlparser`.
+
 ### 0.4.0
 
 - Removes `helper` tree type, `component` type will cover both helper and components.
