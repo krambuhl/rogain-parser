@@ -38,18 +38,8 @@
   ],
   "children": [
     {
-      "type": "text",
-      "data": " "
-    },
-    {
       "type": "component",
-      "name": "Children",
-      "children": [
-        {
-          "type": "text",
-          "data": " "
-        }
-      ]
+      "name": "Children"
     }
   ]
 }

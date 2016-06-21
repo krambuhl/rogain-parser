@@ -10,7 +10,6 @@ gulp.task('default',function() {
       parser(file.contents)
         .then(function(tree) {
           file.path = file.path.replace('.rogain', '.json');
-          console.log(JSON.stringify(tree, null, 2))
           file.contents = new Buffer(JSON.stringify(tree, null, 2));
 
           cb(null, file);

@@ -1,20 +1,27 @@
 {
   "type": "component",
-  "name": [
+  "name": "Box",
+  "attribs": [
     {
-      "type": "text",
-      "data": "Boxclass=\"heavy\"data-key="
+      "type": "attr",
+      "name": "class",
+      "data": "heavy"
     },
     {
-      "type": "variable",
-      "path": "key"
+      "type": "attr",
+      "name": "data-key",
+      "data": [
+        {
+          "type": "variable",
+          "path": "key"
+        }
+      ]
     }
   ],
   "children": [
     {
       "type": "component",
-      "name": "Children",
-      "children": []
+      "name": "Children"
     }
   ]
 }

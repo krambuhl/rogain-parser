@@ -1,17 +1,25 @@
 {
   "type": "tag",
-  "name": [
+  "name": "div",
+  "attribs": [
     {
-      "type": "text",
-      "data": "divclass=\"block\"data-hex=\"#"
+      "type": "attr",
+      "name": "class",
+      "data": "block"
     },
     {
-      "type": "variable",
-      "path": "@attrs.data.hex"
-    },
-    {
-      "type": "text",
-      "data": "\""
+      "type": "attr",
+      "name": "data-hex",
+      "data": [
+        {
+          "type": "text",
+          "data": "#"
+        },
+        {
+          "type": "variable",
+          "path": "@attrs.data.hex"
+        }
+      ]
     }
   ],
   "children": [
