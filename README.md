@@ -2,7 +2,7 @@
 
 Parses html strings with [rogain](https://www.npmjs.com/package/rogain) flavor into JSON compatible trees.  Uses [node-htmlparser](https://github.com/tautologistics/node-htmlparser) for initial pass, then walks the outputed tree looking for components and variables.
 
-## Example 
+## Example
 
 ```js
 import parser from 'rogain-parser';
@@ -10,8 +10,10 @@ import parser from 'rogain-parser';
 parser('<div class="block" data-key={key}><Children /></div>')
   .then(tree => {
     console.log(tree.name) // div
-    console.log(tree.attrs[0]) // { type: 'attr', name: 'class', data: 'block' }
-    console.log(tree.children[0]) // { type: 'component', name: 'Children' }
+    console.log(tree.attrs[0])
+    // { type: 'attr', name: 'class', data: 'block' }
+    console.log(tree.children[0])
+    // { type: 'component', name: 'Children' }
   })
 ```
 

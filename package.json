@@ -1,12 +1,13 @@
 {
   "name": "rogain-parser",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Rogain parser that converts html templates into json trees",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel lib -d dist",
     "develop": "babel lib -w -d dist",
-    "test": "cd test && gulp && tape *.test.js"
+    "test": "cd test && gulp",
+    "test2": "tape **/*.test.js"
   },
   "repository": {
     "type": "git",
@@ -26,14 +27,14 @@
   },
   "homepage": "https://github.com/krambuhl/rogain-parser",
   "dependencies": {
-    "htmlparser": "^1.7.7"
+    "htmlparser2": "^3.9.1"
   },
   "devDependencies": {
-    "babel-cli": "^6.4.5",
-    "babel-plugin-add-module-exports": "^0.1.2",
-    "babel-preset-es2015": "^6.3.13",
-    "gulp": "^3.9.1",
-    "tape": "^4.4.0",
-    "through2": "^2.0.1"
+    "babel-cli": "~6",
+    "babel-plugin-add-module-exports": "~0.1",
+    "babel-preset-es2015": "~6",
+    "gulp": "~3",
+    "tape": "~4",
+    "through2": "~2"
   }
 }

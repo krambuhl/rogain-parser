@@ -4,16 +4,18 @@ var parser = require('../dist');
 var through = require('through2');
 var gulp = require('gulp');
 
-gulp.task('default', function(t) {
+gulp.task('default',function() {
   return gulp.src('./fixtures/*.rogain')
-    .pipe(through.obj((file, enc, next) => {
-      parser(file.contents.toString())
+    .pipe(through.obj((file, enc, cb) => {
+      parser(file.contents)
         .then(function(tree) {
           file.path = file.path.replace('.rogain', '.json');
+          console.log(JSON.stringify(tree, null, 2))
           file.contents = new Buffer(JSON.stringify(tree, null, 2));
-          next(null, file);
+
+          cb(null, file);
         })
-        .catch(next);
+        .catch(err => console.log('ERRR', err));
     }))
-    .pipe(gulp.dest('./fixtures/out'))
-})
+    .pipe(gulp.dest('./fixtures/out'));
+});

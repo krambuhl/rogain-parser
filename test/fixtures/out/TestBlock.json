@@ -1,25 +1,17 @@
 {
   "type": "tag",
-  "name": "div",
-  "attrs": [
+  "name": [
     {
-      "type": "attr",
-      "name": "class",
-      "data": "block"
+      "type": "text",
+      "data": "divclass=\"block\"data-hex=\"#"
     },
     {
-      "type": "attr",
-      "name": "data-hex",
-      "data": [
-        {
-          "type": "text",
-          "data": "#"
-        },
-        {
-          "path": "@attrs.data.hex",
-          "type": "variable"
-        }
-      ]
+      "type": "variable",
+      "path": "@attrs.data.hex"
+    },
+    {
+      "type": "text",
+      "data": "\""
     }
   ],
   "children": [
@@ -27,16 +19,8 @@
       "type": "text",
       "data": [
         {
-          "type": "text",
-          "data": "\n  "
-        },
-        {
-          "path": "@attrs.data.slug",
-          "type": "variable"
-        },
-        {
-          "type": "text",
-          "data": "\n"
+          "type": "variable",
+          "path": "@attrs.data.slug"
         }
       ]
     }

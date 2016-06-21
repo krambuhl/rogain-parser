@@ -1,23 +1,23 @@
-var test = require('tape');
-var parseString = require('../dist/parseString');
+const test = require('tape');
+const parseString = require('../dist/parseString');
 
 test('parseString(str) :: simple string', function(t) {
+  const res = parseString('title');
   t.plan(1);
-  var res = parseString('title');
   t.equal(res, 'title');
 });
 
 test('parseString(str) :: single variable', function(t) {
+  const res = parseString('{title}');
   t.plan(3);
-  var res = parseString('{title}');
   t.equal(res.length, 1);
   t.equal(res[0].type, 'variable');
   t.equal(res[0].path, 'title');
 });
 
 test('parseString(str) :: mixed string/variable', function(t) {
+  const res = parseString('hello {world}');
   t.plan(5);
-  var res = parseString('hello {world}');
   t.equal(res.length, 2);
   t.equal(res[0].type, 'text');
   t.equal(res[0].data, 'hello ');
@@ -26,8 +26,8 @@ test('parseString(str) :: mixed string/variable', function(t) {
 });
 
 test('parseString(str) :: multiple variable', function(t) {
+  const res = parseString('{hello}{world}');
   t.plan(5);
-  var res = parseString('{hello}{world}');
   t.equal(res.length, 2);
   t.equal(res[0].type, 'variable');
   t.equal(res[0].path, 'hello');
@@ -36,8 +36,8 @@ test('parseString(str) :: multiple variable', function(t) {
 });
 
 test('parseString(str) :: mixed string/multi variable', function(t) {
+  const res = parseString('{hello} crazy {world}');
   t.plan(7);
-  var res = parseString('{hello} crazy {world}');
   t.equal(res.length, 3);
   t.equal(res[0].type, 'variable');
   t.equal(res[0].path, 'hello');

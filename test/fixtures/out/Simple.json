@@ -1,14 +1,14 @@
 {
   "type": "tag",
   "name": "div",
-  "attrs": [
+  "attribs": [
     {
       "type": "attr",
       "name": "class",
       "data": [
         {
-          "path": "mooger",
-          "type": "variable"
+          "type": "variable",
+          "path": "mooger"
         },
         {
           "type": "text",
@@ -24,22 +24,32 @@
           "data": "data-"
         },
         {
-          "path": "key",
-          "type": "variable"
+          "type": "variable",
+          "path": "key"
         }
       ],
       "data": [
         {
-          "path": "keys",
-          "type": "variable"
+          "type": "variable",
+          "path": "keys"
         }
       ]
     }
   ],
   "children": [
     {
+      "type": "text",
+      "data": " "
+    },
+    {
       "type": "component",
-      "name": "Children"
+      "name": "Children",
+      "children": [
+        {
+          "type": "text",
+          "data": " "
+        }
+      ]
     }
   ]
 }

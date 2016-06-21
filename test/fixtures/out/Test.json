@@ -4,183 +4,165 @@
   "children": [
     {
       "type": "component",
-      "name": "TestBlock",
-      "attrs": [
+      "name": [
         {
-          "type": "attr",
-          "name": "tagName",
-          "data": [
-            {
-              "path": "tag",
-              "type": "variable"
-            }
-          ]
+          "type": "text",
+          "data": "TestBlocktagName="
         },
         {
-          "type": "attr",
-          "name": [
-            {
-              "path": "data",
-              "type": "variable"
-            }
-          ],
-          "data": [
-            {
-              "path": "colors.0",
-              "type": "variable"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "component",
-      "name": "TestComponent",
-      "attrs": [
+          "type": "variable",
+          "path": "tag"
+        },
         {
-          "type": "attr",
-          "name": "id",
-          "data": "colors"
+          "type": "variable",
+          "path": "data"
+        },
+        {
+          "type": "text",
+          "data": "="
+        },
+        {
+          "type": "variable",
+          "path": "colors.0"
         }
       ],
       "children": [
         {
           "type": "component",
-          "name": "TestBlock",
-          "attrs": [
-            {
-              "type": "attr",
-              "name": "data",
-              "data": [
-                {
-                  "path": "colors.1",
-                  "type": "variable"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "tag",
-          "name": "a",
-          "attrs": [
-            {
-              "type": "attr",
-              "name": "href",
-              "data": "/colors"
-            }
-          ],
+          "name": "TestComponentid=\"colors\"",
           "children": [
             {
-              "type": "text",
-              "data": "Read More"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "component",
-      "name": "Each",
-      "attrs": [
-        {
-          "type": "attr",
-          "name": "data",
-          "data": [
-            {
-              "path": "colors",
-              "type": "variable"
-            }
-          ]
-        },
-        {
-          "type": "attr",
-          "name": "as",
-          "data": "color"
-        }
-      ],
-      "children": [
-        {
-          "type": "component",
-          "name": "TestBlock",
-          "attrs": [
-            {
-              "type": "attr",
-              "name": "data",
-              "data": [
+              "type": "component",
+              "name": [
                 {
-                  "path": "color",
-                  "type": "variable"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "component",
-          "name": "Defined",
-          "attrs": [
-            {
-              "type": "attr",
-              "name": "data",
-              "data": [
+                  "type": "text",
+                  "data": "TestBlockdata="
+                },
                 {
-                  "path": "color.slug",
-                  "type": "variable"
-                }
-              ]
-            }
-          ],
-          "children": [
-            {
-              "type": "tag",
-              "name": "a",
-              "attrs": [
-                {
-                  "type": "attr",
-                  "name": "href",
-                  "data": [
-                    {
-                      "type": "text",
-                      "data": "/colors/"
-                    },
-                    {
-                      "path": "color.slug",
-                      "type": "variable"
-                    }
-                  ]
+                  "type": "variable",
+                  "path": "colors.1"
                 }
               ],
               "children": [
                 {
-                  "type": "text",
-                  "data": "Read More"
+                  "type": "tag",
+                  "name": "ahref=\"",
+                  "attribs": [
+                    {
+                      "type": "attr",
+                      "name": "colors\"",
+                      "data": ""
+                    }
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "data": "ReadMore"
+                    },
+                    {
+                      "type": "component",
+                      "name": [
+                        {
+                          "type": "text",
+                          "data": "Eachdata="
+                        },
+                        {
+                          "type": "variable",
+                          "path": "colors"
+                        },
+                        {
+                          "type": "text",
+                          "data": "as=\"color\""
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "component",
+                          "name": [
+                            {
+                              "type": "text",
+                              "data": "TestBlockdata="
+                            },
+                            {
+                              "type": "variable",
+                              "path": "color"
+                            }
+                          ],
+                          "children": [
+                            {
+                              "type": "component",
+                              "name": [
+                                {
+                                  "type": "text",
+                                  "data": "Defineddata="
+                                },
+                                {
+                                  "type": "variable",
+                                  "path": "color.slug"
+                                }
+                              ],
+                              "children": [
+                                {
+                                  "type": "tag",
+                                  "name": "ahref=\"",
+                                  "attribs": [
+                                    {
+                                      "type": "attr",
+                                      "name": "colors",
+                                      "data": ""
+                                    },
+                                    {
+                                      "type": "attr",
+                                      "name": [
+                                        {
+                                          "type": "variable",
+                                          "path": "color.slug"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "data": "\""
+                                        }
+                                      ],
+                                      "data": ""
+                                    }
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "data": "ReadMore"
+                                    },
+                                    {
+                                      "type": "tag",
+                                      "name": [
+                                        {
+                                          "type": "text",
+                                          "data": "scriptsrc="
+                                        },
+                                        {
+                                          "type": "variable",
+                                          "path": "scripts.main"
+                                        }
+                                      ],
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "data": "functionhello(str)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "type": "tag",
-      "name": "script",
-      "attrs": [
-        {
-          "type": "attr",
-          "name": "src",
-          "data": [
-            {
-              "path": "scripts.main",
-              "type": "variable"
-            }
-          ]
-        }
-      ],
-      "children": [
-        {
-          "data": "\n    function hello(str) { }\n  ",
-          "type": "text"
         }
       ]
     }
