@@ -4,7 +4,7 @@ const getTreeAttrs = require('../dist/getTreeAttrs');
 test('getTreeAttrs(attrs) :: no attributes', function(t) {
   t.plan(2);
   t.equal(getTreeAttrs() === undefined, true);
-  t.equal(getTreeAttrs({}) === undefined, true);
+  t.equal(getTreeAttrs({ }) === undefined, true);
 });
 
 test('getTreeAttrs(attrs) :: simple', function(t) {

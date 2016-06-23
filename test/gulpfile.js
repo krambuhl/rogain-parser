@@ -11,7 +11,6 @@ gulp.task('default',function() {
         .then(function(tree) {
           file.path = file.path.replace('.rogain', '.json');
           file.contents = new Buffer(JSON.stringify(tree, null, 2));
-
           cb(null, file);
         })
         .catch(err => console.log('ERRR', err));

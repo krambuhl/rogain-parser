@@ -1,7 +1,7 @@
 {
   "name": "rogain-parser",
   "version": "0.6.0",
-  "description": "Rogain parser that converts html templates into json trees",
+  "description": "Rogain parser that converts html templates into rogain trees",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel lib -d dist",

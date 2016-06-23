@@ -1,3 +1,0 @@
-<div class="block" data-hex="#{@attrs.data.hex}">
-  {@attrs.data.slug}
-</div>

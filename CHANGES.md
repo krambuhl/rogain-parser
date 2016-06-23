@@ -1,5 +1,9 @@
 # Change Log
 
+### 0.6.0
+
+- Updates tree attributes property from `attrs` to `attribs` to be more inline with cheerio/htmlparser2 api.
+ 
 ### 0.5.0 
 
 - Removed `parseStream`.

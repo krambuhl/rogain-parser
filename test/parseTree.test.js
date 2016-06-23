@@ -42,7 +42,7 @@ test('parseTree(dom) :: dom.data - unwrap text', function(t) {
 });
 
 test('parseTree(dom) :: dom.children - not script', function(t) {
-  const children = [{ "type": "text", "data": "monkies" }];
+  const children = [{ type: 'text', data: 'monkies' }];
   const res = parseTree({ type: 'tag', name: 'a', children: children });
   t.plan(4);
   t.equal(res.type, 'tag');
@@ -52,7 +52,7 @@ test('parseTree(dom) :: dom.children - not script', function(t) {
 });
 
 test('parseTree(dom) :: dom.children - script tag', function(t) {
-  const children = [{ "type": "text", "data": "monkies" }];
+  const children = [{ type: 'text', data: 'monkies' }];
   const res = parseTree({ type: 'script', name: 'script', children: children });
   t.plan(4);
   t.equal(res.type, 'tag');
